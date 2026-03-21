@@ -1,0 +1,30 @@
+schema-version = "1.10.0"
+
+[install]
+ruby.pkg-path = "ruby"
+
+[build.trmnl_preview]
+command = """
+set -e
+
+gem build trmnl_preview.gemspec
+
+GEM_HOME=$out/gems
+GEM_PATH=$GEM_HOME
+
+gem install --no-document --install-dir $GEM_HOME trmnl_preview-*.gem
+
+mkdir -p $out/bin
+
+cat > $out/bin/trmnlp <<EOF
+#!/usr/bin/env bash
+export GEM_HOME="$out/gems"
+export GEM_PATH="$out/gems"
+exec ruby -S trmnlp "$@"
+EOF
+
+chmod +x $out/bin/trmnlp
+"""
+
+runtime-packages = ["ruby"]
+version = "0.7.1"

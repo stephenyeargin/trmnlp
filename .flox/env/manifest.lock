@@ -1,0 +1,147 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "schema-version": "1.10.0",
+    "install": {
+      "ruby": {
+        "pkg-path": "ruby"
+      }
+    },
+    "options": {},
+    "build": {
+      "trmnl_preview": {
+        "command": "set -e\n\ngem build trmnl_preview.gemspec\n\nGEM_HOME=$out/gems\nGEM_PATH=$GEM_HOME\n\ngem install --no-document --install-dir $GEM_HOME trmnl_preview-*.gem\n\nmkdir -p $out/bin\n\ncat > $out/bin/trmnlp <<EOF\n#!/usr/bin/env bash\nexport GEM_HOME=\"$out/gems\"\nexport GEM_PATH=\"$out/gems\"\nexec ruby -S trmnlp \"$@\"\nEOF\n\nchmod +x $out/bin/trmnlp\n",
+        "runtime-packages": [
+          "ruby"
+        ],
+        "version": "0.7.1"
+      }
+    }
+  },
+  "packages": [
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/wkm0a82b5l1jpl1kqbzb6y7vnj332qgm-ruby-3.4.8.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "name": "ruby-3.4.8",
+      "pname": "ruby",
+      "rev": "b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "rev_count": 964859,
+      "rev_date": "2026-03-18T08:17:15Z",
+      "scrape_date": "2026-03-20T00:41:39.146483Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.4.8",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/i7j9yj776rwl4y84cqcnlg812yr3jzg6-ruby-3.4.8-devdoc",
+        "out": "/nix/store/3lbysjs3r0k2y44h4x6f3pd3airbwq01-ruby-3.4.8"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/w0sz8pdxx7ckzj7pz5zvp1844c85lqjy-ruby-3.4.8.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "name": "ruby-3.4.8",
+      "pname": "ruby",
+      "rev": "b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "rev_count": 964859,
+      "rev_date": "2026-03-18T08:17:15Z",
+      "scrape_date": "2026-03-20T01:13:41.298291Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.4.8",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/cr9a63sx31xzh029930d3zp82vyc0raj-ruby-3.4.8-devdoc",
+        "out": "/nix/store/hps1bncgp5vd7hldiyadffynqjw2xmm7-ruby-3.4.8"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/clvida80gw5plnfsvb62g2gv4k80416g-ruby-3.4.8.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "name": "ruby-3.4.8",
+      "pname": "ruby",
+      "rev": "b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "rev_count": 964859,
+      "rev_date": "2026-03-18T08:17:15Z",
+      "scrape_date": "2026-03-20T01:43:00.882777Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.4.8",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/nih9silg5ia4dwzmzjj35whapv3ki7rk-ruby-3.4.8-devdoc",
+        "out": "/nix/store/3y9k47y8xm837v2853bnaqn8g1ls3fc5-ruby-3.4.8"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/35mwr9pkwmk5iw012423lpr45i22gs6r-ruby-3.4.8.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "name": "ruby-3.4.8",
+      "pname": "ruby",
+      "rev": "b40629efe5d6ec48dd1efba650c797ddbd39ace0",
+      "rev_count": 964859,
+      "rev_date": "2026-03-18T08:17:15Z",
+      "scrape_date": "2026-03-20T02:18:36.007579Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.4.8",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/i0hrwz972mg8n1gqp61nmwc7r4nl8ybx-ruby-3.4.8-devdoc",
+        "out": "/nix/store/lmwsrlh42jk9578yfhmw2kpvqvz2r5m6-ruby-3.4.8"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}
